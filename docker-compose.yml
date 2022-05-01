@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  backend-api:
+    ports:
+      - "8080:8080"
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    networks:
+      - tinkoff-backend-bridge
+
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - db:/var/lib/postgresql/data/
+    networks:
+      - tinkoff-backend-bridge
+
+  frontend:
+    ports:
+      -  "8083:80"
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    networks:
+      - tinkoff-backend-bridge
+
+
+networks:
+  tinkoff-backend-bridge:
+
+volumes:
+  db:
