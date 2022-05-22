@@ -10,3 +10,7 @@ All trading bot services started from single repository
 
 
 ## How to run it?
+```
+docker-compose build
+docker-compose up
+```
