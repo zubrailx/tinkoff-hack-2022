@@ -19,3 +19,4 @@ git clone --recursive https://github.com/extra-virgin/backend
 docker-compose build
 docker-compose up
 ```
+Also read backend/README.md
