@@ -5,7 +5,7 @@ All trading bot services started from single repository
 ## Cloning
 
 ```
-git clone --recursive https://github.com/extra-virgin/backend
+git clone --recursive <url>
 ```
 
 ## Requirements
